@@ -22,6 +22,9 @@ p, li, ul {
 
 .tab-bar {
     display: flex;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
     justify-content: center;
     align-items: center;
     background-color: #222;
@@ -41,9 +44,71 @@ p, li, ul {
     /* height: 100px; */
 }
 
+.tab-button.active {
+    background: linear-gradient(to bottom, #222 0%, #0091ff70 100%);
+    border-bottom: 4px solid #0091ff;
+    color: #fff;
+    /* transition: background 0.5s, border-bottom 0.5s; */
+}
+
+.tab-button:hover {
+    background: linear-gradient(to bottom, #222 0%, #0091ff70 100%);
+    color: #fff;
+    /* transition: background 0.5s; */
+}
+
+.tab-button,
+.tab-button.active,
+.tab-button:hover {
+    transition: background 1s, border-bottom 0.5s, color 0.5s;
+}
+
 .content {
     padding: 0px 10px;
 }
+
+.project-card {
+    display: flex;
+    align-items: flex-start;
+    background-color: #1e1e1e;
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.project-image {
+    width: 500px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 20px;
+}
+
+.project-info h1 {
+    color: #f0f0f0;
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.project-info p {
+    color: #b0b0b0;
+    font-size: 1em;
+    margin: 5px 0;
+}
+
+.project-info a {
+    color: inherit;
+    text-decoration: none;
+    font: inherit;
+}
+.project-info a:hover {
+    color: #b0b0b0;
+    transition: color 0.4s;
+}
+
+/* end of used style */
 
 header {
     background-color: #333;
